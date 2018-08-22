@@ -1,0 +1,17 @@
+<div id="utility" role="navigation">
+	<h2 class="offscreen" accesskey="n">Navigation Menu</h2>
+	<ul id="nav-secondary">
+		<li class="active"><#ACTION action="99" linkType="URL" linkText="Logoff <#PARAM name='Username'>"></li>
+		<#SWITCHMODE headerText="<li class='active'>" footerText="</li>">
+		<li class="active"><#ACTION action="10" form="10" linkType="URL" linkText="Main Menu"></li>
+		<#INCLUDE filename="include_instructormenu.html" restriction="UserType:Instructor">
+		<#INCLUDE filename="include_fullproxymenu.html" restriction="UserType:FullProxy">
+		<#INCLUDE filename="include_studentmenu.html" restriction="UserType:Student">
+		<li class="active"><span class="nav-section" tabindex="0">Ares Tools</span>
+			<ul>
+				<li class="last"><a href="<#ACTION action="10" form="73">">My Emails</a></li>
+			</ul>
+		</li>
+	</ul>
+	<div id="alertsgroup"><#ALERTS NoDataAction="showMessage" AllowAjax="Yes"></div>
+</div>
