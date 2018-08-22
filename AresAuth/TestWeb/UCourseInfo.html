@@ -13,8 +13,8 @@
 		<div id="wrap">
 
 			<div id="content-wrap">
-				<#INCLUDE filename="include_studentcoursemenu.html">	
-				
+				<#INCLUDE filename="include_studentcoursemenu.html">
+
 				<div id="content" role="main" tabindex="-1">
 					<h1 class="offscreen">Course <#COURSE field="CourseNumber"/></h1>
 					<span style="background-color:#E6F4FF ;font-size: 110%" tabindex="0"><#STATUS class="fade"></span>
@@ -24,15 +24,15 @@
 						<div class="row"><#COURSE field="CourseNumber"/>&nbsp;<#COURSE field="Name"/><#COURSE field="CourseCode" headerText=" (" footerText=")"/></div>
 						<div class="row"><#TABLE class="xlist-table" name="CourseCrossList" HideColumnHeaders="True" column="CourseNumber" headerText="This course is also cross-listed as the following:" NoDataAction="ShowNothing"/></div>
 						<div class="row"><#COURSE field="Semester"/></div>
-						<div class="row"><#CONDITIONAL Type="NotEmpty" Test="<#COURSE field='URL'>" True="<a href='<#COURSE field='URL'>'><#COURSE field='URL'></a>"></div>	
+						<div class="row"><#CONDITIONAL Type="NotEmpty" Test="<#COURSE field='URL'>" True="<a href='<#COURSE field='URL'>'><#COURSE field='URL'></a>"></div>
 						<div class="row"><#COURSE field="Instructor"/></div>
 						<div class="row"><#COURSE field="Description"/></div>
 						<div class="row"><p class="note">Email subscriptions allow you to receive an email notification when a new item becomes available in this course.<br/>
 							<#SUBSCRIBE notSubscribedText="You are currently <span class='error'>not</span> subscribed. " subscribedText="You are currently subscribed. " subscribeLink="Subscribe Now" unsubscribeLink="Please remove my subscription"/>
 						</p></div>
 					</div>
-			
-						<#TAGCLOUD TagType="Course" MaxFontSizes="5" IncludeTagCount="Yes" TagFence="No" /><br/><br/>                
+
+						<#TAGCLOUD TagType="Course" MaxFontSizes="5" IncludeTagCount="Yes" TagFence="No" /><br/><br/>
 
 					<div>
 						<div class="float-left">
@@ -42,18 +42,18 @@
 								<option value="Title,ArticleTitle">Title</option>
 								<option value="Author">Author</option>
 								<option value="InactiveDate">Available Until</option>
-							</select>   
+							</select>
 							<input type="button" aria-label="Sort button. This button will reload the page and sort the course items by the field specified in the Sort By control." onClick="ResortItems('<#PARAM name="SessionID">', '<#PARAM name="Value">', $('#SortCourseItems option:selected').val());" value="Sort" />
 						</div>
 						<div class="float-right">
 							<button id="ShowBatchInterface" class="EnableBatchEditing" data-batchTable="ItemTable" data-batchMenu="batchMenu" data-enabletext="Show Tag Editor" data-disabletext="Hide Tag Editor">Show Tag Editor</button>
 						</div>
-						<#INCLUDE filename="include_studentBatchMenu.html"> 
+						<#INCLUDE filename="include_studentBatchMenu.html">
 						<form name="UserHome" method="post" action="ares.dll">
 							<input type="hidden" name="action" value="20" />
 							<input type="hidden" name="CourseID" value="<#COURSE field="CourseID"/>" />
 							<input type="hidden" name="SessionID" value="<#PARAM name="SessionID"/>"/>
-							<#TABLE class="student-table filterTable" id="ItemTable" name="Item" type="CourseItems" headerText="Reserve Items" LinkType="ItemView" IconDirect="True" LinkColumn="BothTitlesViewedIcon"  column="BothTitlesViewedIcon:Title" column="Author:Author" column="InactiveDate:Available until" column="Tags:Tags" HotList="Yes" hotListAdd="True" hotListAddText="Add checked items to <#CUSTOMIZATION name='HotListName'>" hotListDelete="True" hotListDeleteText="Remove checked items from <#CUSTOMIZATION name='HotListName'>" UnreadItem="<img src='images/new.gif' alt='New Item'/>" ReadItem="" NoDataAction="ShowMessage" NoDataMessage="There are no items in this course.">		
+							<#TABLE class="student-table filterTable" id="ItemTable" name="Item" type="CourseItems" headerText="Reserve Items" LinkType="ItemView" IconDirect="True" LinkColumn="BothTitlesViewedIcon"  column="BothTitlesViewedIcon:Title" column="Author:Author" column="Tags:Tags" HotList="Yes" hotListAdd="True" hotListAddText="Add checked items to <#CUSTOMIZATION name='HotListName'>" hotListDelete="True" hotListDeleteText="Remove checked items from <#CUSTOMIZATION name='HotListName'>" UnreadItem="<img src='images/new.gif' alt='New Item'/>" ReadItem="" NoDataAction="ShowMessage" NoDataMessage="There are no items in this course.">
 						</form>
 					</div>
 
@@ -62,12 +62,12 @@
 						<p>Powered by <a href="https://www.atlas-sys.com/Ares/" target="_blank">Ares</a></p>
 						<#INCLUDE filename="include_footer.html">
 					</div>
-					
+
 				</div>
-				
-			
+
+
 			</div>
-			
+
 		</div>
 	</body>
 </html>
