@@ -9,13 +9,13 @@
 	</head>
 	<body id="type-a">
 		<div id="wrap">
-			
+
 			<div id="content-wrap">
 				<#INCLUDE filename="include_menu.html">
 
 				<div id="content" role="main" tabindex="-1">
 					<h1>Main Menu</h1>
-					<span style="background-color:#E6F4FF; font-size: 110%"><#STATUS class="fade"></span>
+					<div style="background-color:#E6F4FF ;font-size: 110%; padding: 1rem;margin-bottom:1em;"><#STATUS class="fade"></div>
 					<#TABLE name="Course" class="instructor-table filterTable" headerText="Current and Upcoming Courses" LinkColumn="CourseNumber" Session="ItemAddition" Role="Instructor" column="CourseNumber:Course" column="Semester:Semester" column="Name:Name" column="ReserveItems:Reserve Items" NoDataAction="ShowMessage" NoDataMessage="No courses found.">		<br/>
 					<#TABLE class="instructor-table filterTable" name="Item" headerText="Awaiting Supply By Instructor" ShowHiddenItems="True" LinkType="ItemEdit" LinkColumn="BothTitlesIcon" column="BothTitlesIcon:Title" column="Author:Author" column="Department:Department" column="CourseNumber:Course" ItemStatus="Awaiting Supply By Instructor" NoDataAction="ShowNothing">
 

@@ -13,23 +13,26 @@
 
 			<div id="content-wrap">
 				<#INCLUDE filename="include_menu.html">
-				
+
 				<div id="content" role="main" tabindex="-1">
 					<h1 class="offscreen"><#CUSTOMIZATION name='HotListName'></h1>
-					<a href="<#ACTION action="10" form="60" valueType="Lookup" Value="CourseID">">Back to <#COURSE field="Name"></a>
+					<a href="<#ACTION action="10" form="60" valueType="Lookup" Value="CourseID">" class="small">&larr; Back to <#COURSE field="Name"></a>
 					<br/>
-					<div class="student" style="width:100%">
-						<div class="header">Reserve Item</div>
-						<span style="float: left; margin: 10px 10px 0px 2px; width: 20px; height: 100px"><#ITEM Field="Icon"></span>
-						<div class="row"><span style="font-weight: bold"><#ITEM field="Title"/></span></div>
-						<div class="row"><#ITEM field="ArticleTitle"/></div>
-						<div class="row"><#ITEM field="Author"/></div>
-						<div class="row"><#ITEM field="Description"/></div>
-						<div class="row"><#ITEM field="BuildURL" freeText="False" linkText="<img src='images/new-win-icon.gif' height='16' width='16' alt='View item in new window' aria-hidden='true' /> View this item"></div>
-						<div class="row"><#ITEM field="BuildRISExportURL" alt="Export Citation" linkText="Export Citation"></div>
-						<div class="row"><#ITEM field="Tags" TagURL="Yes" TagType="Instructor" headerText="Instructor Tags: "/></div>
+					<div class="student item-information">
+						<span style="float: right; margin: 10px 10px 10px 0; width: 20px; height: 100px"><#ITEM Field="Icon"></span>
+
+						<span class="item-title"><#ITEM field="Title"/></span>
+						<span class="item-subtitle"><#ITEM field="ArticleTitle"/></span>
+						<span class="item-author"><#ITEM field="Author"/></span>
+
+						<p><#ITEM field="Description"/></p>
+
+						<span class="links"><#ITEM field="BuildURL" freeText="False" linkText="<img src='images/view-item.png' width='16px' alt='View item in new window' aria-hidden='true' /> View this item">
+						<#ITEM field="BuildRISExportURL" alt="Export Citation" linkText="<img src='images/citation.png' width='16px' alt='View item citation' aria-hidden='true' /> Export Citation"></span>
+
+						<#ITEM field="Tags" TagURL="Yes" TagType="Instructor" headerText="Instructor Tags: "/>
 						<div class="row">
-							<form action="ares.dll" method="post" name="ItemTags" class="f-wrap-request">
+							<form action="ares.dll" method="post" name="ItemTags" style="margin-top: 1rem;>
 								<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
 								<input type="hidden" name="ItemID" value="<#ITEM field="ItemID"/>">
 								<input type="hidden" name="Action" value="11"/>
@@ -49,20 +52,20 @@
 
 						<div class="row"><#ITEM field="Text"></div>
 						<#ITEM field="PhysicalText" includeFile="PhysicalItem.html"/>
-						<div class="row"><#ITEM field="WorldcatLink" linkText="<img src='images/worldcat.gif' height='16' width='16' alt='Worldcat Logo' title='Get more information from OCLC Open Worldcat'/> Get more information"></div>		
-					</div>											
+						<div class="row"><#ITEM field="WorldcatLink" linkText="<img src='images/worldcat.gif' height='16' width='16' alt='Worldcat Logo' title='Get more information from OCLC Open Worldcat'/> Get more information"></div>
+					</div>
 
 					<div id="footer" role="contentinfo">
 						<p><#COPYRIGHT></p>
 						<p>Powered by <a href="https://www.atlas-sys.com/Ares/" target="_blank">Ares</a></p>
 						<#INCLUDE filename="include_footer.html">
 					</div>
-					
+
 				</div>
-				
-			
+
+
 			</div>
-			
+
 		</div>
 	</body>
 </html>
