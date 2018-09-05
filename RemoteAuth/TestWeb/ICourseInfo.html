@@ -42,7 +42,7 @@
                     <button id="ShowBatchInterface" class="EnableBatchEditing" data-batchTable="ItemTable" data-batchMenu="batchMenu" data-enabletext="Show Tag Editor" data-disabletext="Hide Tag Editor">Show Tag Editor</button>
 				</div>
                 <#INCLUDE filename="include_instructorBatchMenu.html">
-                <#TABLE class="instructor-table filterTable" name="Item" id="ItemTable" type="CourseItems" headerText="Reserve Items" LinkType="ItemInfo" LinkColumn="BothTitlesIcon" column="ItemID:ID" column="Author:Author" column="BothTitlesIcon:Title"  column="inactiveDate:Inactive" column="CurrentStatus:Status" column="Tags:Tags" NoDataAction="ShowMessage" NoDataMessage="There are no items in this course." allowsort="true">
+                <#TABLE class="instructor-table filterTable" name="Item" id="ItemTable" type="CourseItems" headerText="Reserve Items" LinkType="ItemInfo" LinkColumn="BothTitlesIcon" column="ItemID:ID" column="Author:Author" column="BothTitlesIcon:Title"  column="inactiveDate:Inactive" column="CurrentStatus:Status" column="ItemInfo5:Week Needed"  column="Tags:Tags" NoDataAction="ShowMessage" NoDataMessage="There are no items in this course." allowsort="true">
 
                 <div id="footer" role="contentinfo">
                     <p><#COPYRIGHT></p>

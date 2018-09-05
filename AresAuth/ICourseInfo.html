@@ -19,17 +19,16 @@
                 <div id="content" role="main" tabindex="-1">
                     <h1 class="offscreen">Course <#COURSE field="CourseNumber"/></h1>
                     <span style="background-color:#E6F4FF ;font-size: 110%"><#STATUS class="fade"/></span>
-                    <div class="instructor">
+                    <div class="instructor course-information">
                         <#INCLUDE filename="include_defaultcourseinfo.html"/>
-                        <div class="row">
-                            <p class="note">Email subscriptions allow you to receive an email notification when a new item becomes available in this course.<br/>
-                            <#SUBSCRIBE notSubscribedText="You are currently <span class='error'>not</span> subscribed. " subscribedText="You are currently subscribed. " subscribeLink="Subscribe Now" unsubscribeLink="Please remove my subscription"/>
-                            </p>
-                        </div>
+                        <p class="note">Email subscriptions allow you to receive an email notification when a new item becomes available in this course.<br/>
+                        <#SUBSCRIBE notSubscribedText="You are currently <span class='error'>not</span> subscribed. " subscribedText="You are currently subscribed. " subscribeLink="Subscribe Now" unsubscribeLink="Please remove my subscription"/>
+                        </p>
                     </div>
 
-                    <#TAGCLOUD TagType="Course" MaxFontSizes="5" IncludeTagCount="Yes" TagFence="No" /><br/><br/>
-                    <div class="float-left">
+                    <div class="tag-cloud"><#TAGCLOUD TagType="Course" MaxFontSizes="5" IncludeTagCount="Yes" TagFence="No" /></div>
+
+                    <div class="sort-options">
                         <select id="SortCourseItems" name="SortCourseItems" aria-label="Sort by dropdown. Select which field the course items will be ordered by, then press the Sort button to resort the course items." />
                             <option value="" selected="selected" disabled="disabled">Sort By</option>
                             <option value="SortOrder,Title,ArticleTitle">Default</option>
@@ -39,12 +38,11 @@
                         </select>
                         <input type="button" aria-label="Sort button. This button will reload the page and sort the course items by the field specified in the Sort By control." onClick="ResortItems('<#PARAM name="SessionID">', '<#PARAM name="Value">', $('#SortCourseItems option:selected').val());" value="Sort" />
                         <input type="button" onClick="SaveSortOrder('ItemTable', 'ID', '<#ACTION action="70" type="786">')" value="Save Item Order"/>
-                    </div>
-                    <div class="float-right">
+
                         <button id="ShowBatchInterface" class="EnableBatchEditing" data-batchTable="ItemTable" data-batchMenu="batchMenu" data-enabletext="Show Tag Editor" data-disabletext="Hide Tag Editor">Show Tag Editor</button>
                     </div>
                     <#INCLUDE filename="include_instructorBatchMenu.html">
-                    <#TABLE class="instructor-table filterTable" name="Item" id="ItemTable" type="CourseItems" headerText="Reserve Items" LinkType="ItemInfo" LinkColumn="BothTitlesIcon" column="ItemID:ID" column="Author:Author" column="BothTitlesIcon:Title" column="inactiveDate:Inactive" column="CurrentStatus:Status" column="Tags:Tags" NoDataAction="ShowMessage" NoDataMessage="There are no items in this course." allowsort="true">
+                    <#TABLE class="instructor-table filterTable" name="Item" id="ItemTable" type="CourseItems" headerText="Reserve Items" LinkType="ItemInfo" LinkColumn="BothTitlesIcon" column="ItemID:ID" column="Author:Author" column="BothTitles:Title" column="inactiveDate:Inactive" column="CurrentStatus:Status" column="ItemInfo5:Week Needed" column="Tags:Tags" IconColumn="BothTitles" IconAlign="Right" NoDataAction="ShowMessage" NoDataMessage="There are no items in this course." allowsort="true">
 
                     <div id="footer" role="contentinfo">
                         <p><#COPYRIGHT></p>
