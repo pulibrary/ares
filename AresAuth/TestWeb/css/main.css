@@ -905,6 +905,14 @@ fieldset legend {
 	color: #555
 }
 
+.links .disabledText {
+	display: none;
+}
+
+.links .call-number {
+	margin-bottom: 1em;
+}
+
 /* LISTS */
 
 ul {
@@ -958,7 +966,9 @@ dl dl {
 /* GENERAL */
 
 img {
-	border: none
+	border: none;
+	height: auto;
+	width: 22px;
 }
 
 hr {

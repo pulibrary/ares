@@ -27,7 +27,12 @@
 
 						<p><#ITEM field="Description"/></p>
 
-						<span class="links"><#ITEM field="BuildURL" freeText="False" linkText="<img src='images/view-item.png' width='16px' alt='View item in new window' aria-hidden='true' /> View this item"></span>
+						<div class="links">
+							<#ITEM field="BuildURL" freeText="False" linkText="<img src='images/view-item.png' width='16px' alt='View item in new window' aria-hidden='true' /> View this item">
+
+							<div class="row"><#ITEM field="Text"></div>
+							<#ITEM field="PhysicalText" includeFile="PhysicalItem.html"/>
+						</div>
 
 						<#ITEM field="Tags" TagURL="Yes" TagType="Instructor" headerText="Instructor Tags: "/>
 						<div class="row">
@@ -49,9 +54,6 @@
 							</form>
 						</div>
 
-						<div class="row"><#ITEM field="Text"></div>
-						<#ITEM field="PhysicalText" includeFile="PhysicalItem.html"/>
-						<div class="row"><#ITEM field="WorldcatLink" linkText="<img src='images/worldcat.gif' height='16' width='16' alt='Worldcat Logo' title='Get more information from OCLC Open Worldcat'/> Get more information"></div>
 					</div>
 
 					<div id="footer" role="contentinfo">
