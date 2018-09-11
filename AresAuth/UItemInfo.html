@@ -23,7 +23,9 @@
 
 						<span class="item-title"><#ITEM field="Title"/></span>
 						<span class="item-subtitle"><#ITEM field="ArticleTitle"/></span>
+						<span class="item-details"><#CONDITIONAL type="NotEmpty" test="<#ITEM field='Volume'>" true="<#ITEM field='Volume'>"> <#CONDITIONAL type="NotEmpty" test="<#ITEM field='Issue'>" true="<#ITEM field='Issue'>"> <#CONDITIONAL type="NotEmpty" test="<#ITEM field='Pages'>" true="<#ITEM field='Pages'>"></span>
 						<span class="item-author"><#ITEM field="Author"/></span>
+
 
 						<p><#ITEM field="Description"/></p>
 

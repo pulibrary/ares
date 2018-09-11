@@ -2218,6 +2218,12 @@ table caption {
 	font-weight: 500;
 }
 
+.item-details {
+	display: block;
+	font-size: 14px;
+	font-style: italic;
+}
+
 .item-author {
 	display: block;
 	color: #37474f;

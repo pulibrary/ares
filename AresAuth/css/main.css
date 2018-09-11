@@ -905,6 +905,14 @@ fieldset legend {
 	color: #555
 }
 
+.links .disabledText {
+	display: none;
+}
+
+.links .call-number {
+	margin-bottom: 1em;
+}
+
 /* LISTS */
 
 ul {
@@ -2208,6 +2216,12 @@ table caption {
 	line-height: 32px;
 	font-size: 24px;
 	font-weight: 500;
+}
+
+.item-details {
+	display: block;
+	font-size: 14px;
+	font-style: italic;
 }
 
 .item-author {
