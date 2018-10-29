@@ -4,7 +4,7 @@
 		<title>Ares - Reserve Book</title>
 		<#INCLUDE filename="include_head.html">
 	</head>
-	
+
 	<body id="type-a">
 		<div id="wrap">
 			<div id="content-wrap">
@@ -27,7 +27,7 @@
 							<legend class="offscreen">Reserve Item: Book</legend>
 							<span style="background-color:#E6F4FF ;font-size: 110%" tabindex="0"><#STATUS class="fade"></span>
 
-							<#OPTION name="PickupLocation" selectedValue="<#CUSTOMIZATION name='DefaultPickupSite'>" headerText="<label for='PickupLocation'><strong><span class='<#VALIDATION name=ERRORPickupLocation>'>Pickup Location for Physical Items</span></strong>" footerText="<br /></label>">
+							<#OPTION name="PickupLocation" selectedValue="<#CUSTOMIZATION name='DefaultPickupSite'>" headerText="<label for='PickupLocation'><strong><span class='<#VALIDATION name=ERRORPickupLocation>'>Reserve Location for Item</span></strong>" footerText="<br /></label>">
 
 							<div id="LoanPeriodDiv"><#OPTION name="LoanPeriod" isSharedListItem="False" SitePeriods="True" headerText="<label for='LoanPeriod'><#ERROR Name='ERRORLoanPeriod'><strong><span class='<#VALIDATION name='ERRORLoanPeriod'>'>Loan Period for Physical Items</span></strong>" footerText="<br /></label>"></div>
 
