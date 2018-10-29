@@ -27,6 +27,26 @@
 							<legend class="offscreen">Reserve Item: Book</legend>
 							<span style="background-color:#E6F4FF ;font-size: 110%" tabindex="0"><#STATUS class="fade"></span>
 
+							<label for="ItemInfo5"><strong><span class="Valid">Week Needed</span></strong>
+								<select id="ItemInfo5" name="ItemInfo5">
+								<option value="01">Week 1</option>
+								<option value="02">Week 2</option>
+								<option value="03">Week 3</option>
+								<option value="04">Week 4</option>
+								<option value="05">Week 5</option>
+								<option value="06">Week 6</option>
+								<option value="07">Week 7</option>
+								<option value="08">Week 8</option>
+								<option value="09">Week 9</option>
+								<option value="10">Week 10</option>
+								<option value="11">Week 11</option>
+								<option value="12">Week 12</option>
+								<option value="13">Week 13</option>
+								<option value="14">Week 14</option>
+								<option value="15">Week 15</option>
+								</select>
+								<br></label>
+
 							<#OPTION name="PickupLocation" selectedValue="<#CUSTOMIZATION name='DefaultPickupSite'>" headerText="<label for='PickupLocation'><strong><span class='<#VALIDATION name=ERRORPickupLocation>'>Reserve Location for Item</span></strong>" footerText="<br /></label>">
 
 							<div id="LoanPeriodDiv"><#OPTION name="LoanPeriod" isSharedListItem="False" SitePeriods="True" headerText="<label for='LoanPeriod'><#ERROR Name='ERRORLoanPeriod'><strong><span class='<#VALIDATION name='ERRORLoanPeriod'>'>Loan Period for Physical Items</span></strong>" footerText="<br /></label>"></div>

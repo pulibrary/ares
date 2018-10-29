@@ -4,32 +4,52 @@
 		<title>Ares - Item Upload</title>
 		<#INCLUDE filename="include_head.html">
 	</head>
-	
+
 	<body id="type-a">
-		<div id="wrap"> 
+		<div id="wrap">
 			<div id="content-wrap">
 				<#INCLUDE filename="include_instructorcoursemenu.html" restriction="Usertype:CourseInstructor">
 				<#INCLUDE filename="include_instructorcoursemenu.html" restriction="Usertype:CourseFullProxy">
 				<#INCLUDE filename="include_courseproxycoursemenu.html" restriction="Usertype:CourseProxy">
 				<div id="content" role="main" tabindex="-1">
 					<form action="ares.dll" method="post" name="createitem" class="f-wrap-request">
-						<input type="hidden" name="Action" value="11"/>        
-						<input type="hidden" name="Type" value="10"/>	
-						<input type="hidden" name="ItemType" value="MON"/>						
+						<input type="hidden" name="Action" value="11"/>
+						<input type="hidden" name="Type" value="10"/>
+						<input type="hidden" name="ItemType" value="MON"/>
 						<input type="hidden" name="format" value="InstructorUpload"/>
 						<input type="hidden" name="CopyrightRequired" value="No" />
-						<input type="hidden" name="CourseID" value="<#COURSE field="CourseID"/>"/>				
+						<input type="hidden" name="CourseID" value="<#COURSE field="CourseID"/>"/>
 						<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
 						<input type="hidden" name="SupplyMethod" value="File"/>
-						
+
 						<div class="req" tabindex="0"><strong>*</strong> Indicates required field</div>
 						<fieldset>
 							<h1 tabindex="0">Reserve Item: File Upload</h1>
 							<legend class="offscreen">Reserve Item: File Upload</legend>
 							<span style="background-color:#E6F4FF ;font-size: 110%" tabindex="0"><#STATUS class="fade"></span>
 							<h2 tabindex="0">Item Information</h2>
-							
-							<label for="Title"><#ERROR Name="ERRORTitle">	                		
+
+							<label for="ItemInfo5"><strong><span class="Valid">Week Needed</span></strong>
+								<select id="ItemInfo5" name="ItemInfo5">
+								<option value="01">Week 1</option>
+								<option value="02">Week 2</option>
+								<option value="03">Week 3</option>
+								<option value="04">Week 4</option>
+								<option value="05">Week 5</option>
+								<option value="06">Week 6</option>
+								<option value="07">Week 7</option>
+								<option value="08">Week 8</option>
+								<option value="09">Week 9</option>
+								<option value="10">Week 10</option>
+								<option value="11">Week 11</option>
+								<option value="12">Week 12</option>
+								<option value="13">Week 13</option>
+								<option value="14">Week 14</option>
+								<option value="15">Week 15</option>
+								</select>
+								<br></label>
+
+							<label for="Title"><#ERROR Name="ERRORTitle">
 								<strong>
 									<span class="req">*</span>
 									<span class="<#VALIDATION name="ERRORTitle">">Title</span><br />
@@ -47,7 +67,7 @@
 								</strong>
 								<input id="Author" name="Author" type="text" size="40" class="f-name" value="<#PARAM name="Author"/>"><br />
 							</label>
-							
+
 							<br>
 
 							<label for="Notes"><#ERROR name="ERRORNotes">
@@ -67,13 +87,13 @@
 								<textarea id="ItemTags" name="ItemTags" rows="4"><#PARAM name="ItemTags"/></textarea><br />
 							</label>
 
-							<#TABLE class="instructor-table" name="CourseItemRestrictions" courseChoice="one" headerText="Reserve Restrictions" IncludeJavascriptCalendar="Yes" calendarText="<img src='images/cal.gif' alt='Open Calendar'/>"/>
-							
+							<#TABLE class="instructor-table reserve-restrictions" name="CourseItemRestrictions" courseChoice="one" headerText="Reserve Restrictions" IncludeJavascriptCalendar="Yes" calendarText="<img src='images/cal.gif' alt='Open Calendar'/>"/>
+
 							<input class="f-submit" type="submit" name="SubmitButton" value="Submit Item" />
-							<input class="f-submit" type="reset" name="ClearButton" value="Clear" />								
-			
+							<input class="f-submit" type="reset" name="ClearButton" value="Clear" />
+
 						</fieldset>
-					</form>			
+					</form>
 					<div id="footer" role="contentinfo">
 						<p><#COPYRIGHT></p>
 						<p>Powered by <a href="https://www.atlas-sys.com/Ares/" target="_blank">Ares</a></p>

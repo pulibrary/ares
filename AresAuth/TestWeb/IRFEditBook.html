@@ -30,6 +30,26 @@
 
 							<p><#INCLUDE filename="include_viewdelete.html"></p>
 
+							<label for="ItemInfo5"><strong><span class="Valid">Week Needed</span></strong>
+								<select id="ItemInfo5" name="ItemInfo5">
+								<option value="01">Week 1</option>
+								<option value="02">Week 2</option>
+								<option value="03">Week 3</option>
+								<option value="04">Week 4</option>
+								<option value="05">Week 5</option>
+								<option value="06">Week 6</option>
+								<option value="07">Week 7</option>
+								<option value="08">Week 8</option>
+								<option value="09">Week 9</option>
+								<option value="10">Week 10</option>
+								<option value="11">Week 11</option>
+								<option value="12">Week 12</option>
+								<option value="13">Week 13</option>
+								<option value="14">Week 14</option>
+								<option value="15">Week 15</option>
+								</select>
+								<br></label>
+
 							<#OPTION name="PickupLocation" headerText="<label for='Pickup Location'><strong><span class='<#VALIDATION name=ERRORPickupLocation>'>Reserve Location for Item</span></strong>" footerText="<br /></label>">
 
 							<div id="LoanPeriodDiv"><#OPTION name="LoanPeriod" isSharedListItem="False" SitePeriods="True" headerText="<label for='LoanPeriod'><#ERROR Name='ERRORLoanPeriod'><strong><span class='<#VALIDATION name='ERRORLoanPeriod'>'>Loan Period for Physical Items</span></strong>" footerText="<br /></label>"></div>
@@ -51,7 +71,6 @@
 								</strong>
 								<input name="Title" id="Title" type="text" size="20" class="f-name" value="<#PARAM name="Title"/>" required/><br />
 							</label>
-
 
 							<label for="Publisher"><#ERROR Name="ERRORPublisher">
 								<strong>
@@ -98,7 +117,7 @@
 							</label>
 
 							<label for="ESPNumber"><#ERROR Name="ERRORESPNumber">
-								<strong><
+								<strong>
 									<span class="<#VALIDATION name="ERRORESPNumber">">OCLC or Docline UI Number</span>
 								</strong>
 								<input id="ESPNumber" name="ESPNumber" type="text" size="20" class="f-name" value="<#PARAM name="ESPNumber"/>"><br />
@@ -112,7 +131,7 @@
 								<textarea id="Notes" name="ItemNote" rows="2" cols="40" class="f-name"><#PARAM name="ItemNote"></textarea>
 								<br /><br />
 
-								<#TABLE class="instructor-table-nohover reserve-restrictions" name="ItemNotes" headerText="Previous Notes" noDataAction="ShowNothing" noDataMessage="No Notes" column="Note" column="AddedBy" column="NoteDate" column="NoteType" ExcludeNoteTypes="Staff,Copyright">
+								<#TABLE class="instructor-table-nohover" name="ItemNotes" headerText="Previous Notes" noDataAction="ShowNothing" noDataMessage="No Notes" column="Note" column="AddedBy" column="NoteDate" column="NoteType" ExcludeNoteTypes="Staff,Copyright">
 							</label>
 
 							<label for="ItemTags"><#ERROR name="ItemTags">
@@ -150,8 +169,6 @@
 								</fieldset>
 							</label>
 
-							<h2>Where did you learn about this item?</h2>
-
 							<label for="CitedIn"><#ERROR name="ERRORCitedIn">
 								<strong>
 									<span class="<#VALIDATION name="ERRORCitedIn">">Where did you find this item cited?</span>
@@ -160,7 +177,7 @@
 								<input id="CitedIn" name="CitedIn" type="text" size="20" class="f-name" value="<#PARAM name="CitedIn"/>"/><br />
 							</label>
 
-							<#TABLE class="instructor-table" name="CourseItemRestrictions" courseChoice="one" headerText="Reserve Restrictions" IncludeJavascriptCalendar="Yes" calendarText="<img src='images/cal.gif' alt='Open Calendar'/>"/>
+							<#TABLE class="instructor-table reserve-restrictions" name="CourseItemRestrictions" courseChoice="one" headerText="Reserve Restrictions" IncludeJavascriptCalendar="Yes" calendarText="<img src='images/cal.gif' alt='Open Calendar'/>"/>
 
 							<input type="hidden" name="CopyrightRequired" value="<#PARAM name="CopyrightRequired"/>">
 							<input type="hidden" name="CopyrightObtained" value="<#PARAM name="CopyrightObtained"/>">
