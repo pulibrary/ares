@@ -33,14 +33,15 @@
 									<span class="<#VALIDATION name="ERRORTitle">">Journal Title</span><br/>
 									<span class="note">Please do not abbreviate unless your citation is abbreviated</span>
 								</strong>
-								<input id="Title" name="Title" type="text" size="40" class="f-name" value="<#PARAM name="Title">"><br />
+								<input id="Title" name="Title" type="text" size="40" class="f-name" value="<#PARAM name="Title">" required><br />
 							</label>
 
 							<label for="Volume"><#ERROR name="ERRORVolume">
 								<strong>
+									<span class="req">*</span>
 									<span class="<#VALIDATION name="ERRORVolume">">Journal Volume</span>
 								</strong>
-								<input id="Volume" name="Volume" type="text" size="40" class="f-name" value="<#PARAM name="Volume">"><br />
+								<input id="Volume" name="Volume" type="text" size="40" class="f-name" value="<#PARAM name="Volume">" required><br />
 							</label>
 
 							<label for="Issue"><#ERROR name="ERRORIssue">
@@ -62,7 +63,7 @@
 									<span class="req">*</span>
 									<span class="<#VALIDATION name="ERRORYear">">Journal Year</span>
 								</strong>
-								<input id="JournalYear" name="JournalYear" type="text" size="40" class="f-name" value="<#PARAM name="JournalYear">"><br />
+								<input id="JournalYear" name="JournalYear" type="text" size="40" class="f-name" value="<#PARAM name="JournalYear">" required><br />
 							</label>
 
 							<label for="ArticleTitle"><#ERROR name="ERRORArticleTitle">
@@ -70,7 +71,7 @@
 									<span class="req">*</span>
 									<span class="<#VALIDATION name="ERRORArticleTitle">">Article Title</span>
 								</strong>
-								<input id="ArticleTitle" name="ArticleTitle" type="text" size="40" class="f-name" value="<#PARAM name="ArticleTitle">"><br />
+								<input id="ArticleTitle" name="ArticleTitle" type="text" size="40" class="f-name" value="<#PARAM name="ArticleTitle">" required><br />
 							</label>
 
 							<label for="Author"><#ERROR name="ERRORAuthor">
@@ -79,7 +80,7 @@
 									<span class="<#VALIDATION name="ERRORAuthor">">Article Author</span><br/>
 									<span class="note">(Last Name, First Name)</span>
 								</strong>
-								<input id="Author" name="Author" type="text" size="40" class="f-name" value="<#PARAM name="Author">"><br />
+								<input id="Author" name="Author" type="text" size="40" class="f-name" value="<#PARAM name="Author">" required><br />
 							</label>
 
 							<label for="Pages"><#ERROR name="ERRORPages">
@@ -87,7 +88,7 @@
 									<span class="req">*</span>
 									<span class="<#VALIDATION name="ERRORPages">">Inclusive Pages</span>
 								</strong>
-								<input id="Pages" name="Pages" type="text" size="40" class="f-name" value="<#PARAM name="Pages">"><br />
+								<input id="Pages" name="Pages" type="text" size="40" class="f-name" value="<#PARAM name="Pages">" required><br />
 							</label>
 
 							<label for="ISXN"><#ERROR name="ERRORISXN">
