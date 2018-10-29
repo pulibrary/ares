@@ -4,7 +4,7 @@
 		<title>Ares - Edit Item <#ITEM field="ItemID"/></title>
 		<#INCLUDE filename="include_head.html">
 	</head>
-	
+
 	<body id="type-a">
 		<div id="wrap">
 			<#INCLUDE filename="include_setItemFieldsAsReadOnly.html">
@@ -16,9 +16,9 @@
 					<form action="ares.dll" method="post" name="CreateCourse" class="f-wrap-request">
 						<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
 						<input type="hidden" name="ItemID" value="<#ITEM field="ItemID"/>">
-						<input type="hidden" name="ItemType" value="SER">  
+						<input type="hidden" name="ItemType" value="SER">
 						<input type="hidden" name="Action" value="11"/>
-						<input type="hidden" name="Type" value="30"/>	
+						<input type="hidden" name="Type" value="30"/>
 						<input type="hidden" name="format" value="Article" />
 
 						<div class="req" tabindex="0"><strong>*</strong> Indicates required field</div>
@@ -38,7 +38,7 @@
 								</strong>
 								<input id="Title" name="Title" type="text" size="40" class="f-name" value="<#PARAM name="Title">"><br />
 							</label>
-						
+
 							<label for="Volume"><#ERROR name="ERRORVolume">
 								<strong>
 									<span class="<#VALIDATION name="ERRORVolume">">Journal Volume</span>
@@ -60,7 +60,7 @@
 								</strong>
 								<input id="JournalYear" name="JournalYear" type="text" size="40" class="f-name" value="<#PARAM name="JournalYear">"><br />
 							</label>
-							
+
 							<label for="JournalMonth"><#ERROR name="ERRORMonth">
 								<strong>
 									<span class="<#VALIDATION name="ERRORMonth">">Journal Month</span>
@@ -139,31 +139,31 @@
 								</strong>
 								<input id="CitedIn" name="CitedIn" type="text" size="40" class="f-name" value="<#PARAM name="CitedIn">"><br />
 							</label>
-						
+
 							<label for="SupplyMethod"><#ERROR name="ERRORSupplyMethod">
 								<strong>
 									<span class="<#VALIDATION name="ERRORSupplyMethod">" tabindex="0">Do you want to supply new material for this reserve item?</span><#ITEM field="BuildURL" alt="View this item" linkText="<br/>This item is currently available to students">
 								</strong>
-								<fieldset>	
+								<fieldset>
 									<legend>Supply method</legend>
 									<label for="None">
-										<input id="None" type="radio" checked="checked" name="SupplyMethod" value="None" class="f-radio" />
+										<input id="None" type="radio" checked name="SupplyMethod" value="None" class="f-radio" />
 										I do not want to change the actual reserve content
 									</label>
+
+									<label for="StaffSearch">
+										<input id="StaffSearch" type="radio" name="SupplyMethod" value="StaffSearch" class="f-radio" />
+										Please have library staff locate the material</label>
 
 									<label for="File">
 										<input id="File" type="radio" name="SupplyMethod" value="File" class="f-radio" />
 										I will upload a file
 									</label>
-									
+
 									<label for="WillDeliver">
 										<input id="WillDeliver" type="radio" name="SupplyMethod" value="WillDeliver" class="f-radio" />
 										I will bring the material to the library
 									</label>
-								
-									<label for="StaffSearch">
-										<input id="StaffSearch" type="radio" name="SupplyMethod" value="StaffSearch" class="f-radio" />
-										Please have library staff pull the material off the shelves</label>
 
 									<label for="WebLink">
 										<input id="WebLink" type="radio" name="SupplyMethod" value="WebLink" class="f-radio" />
@@ -178,18 +178,18 @@
 								</strong>
 								<input id="URL" name="URL" type="text" size="40" class="f-name" value="<#PARAM name="URL">"><br />
 							</label>
-						
+
 							<#TABLE class="instructor-table-nohover" name="CourseItemRestrictions" courseChoice="one" headerText="Reserve Restrictions" IncludeJavascriptCalendar="Yes" calendarText="<img src='images/cal.gif' alt='Open Calendar'/>"/>
 
 							<input type="hidden" name="CopyrightRequired" value="<#PARAM name="CopyrightRequired"/>">
 							<input type="hidden" name="CopyrightObtained" value="<#PARAM name="CopyrightObtained"/>">
-								
+
 							<input class="f-submit" type="submit" name="SubmitButton" value="Submit Item" />
-							<input class="f-submit" type="submit" name="DeleteButton" value="Delete Item" />				
-							<input class="f-submit" type="reset" name="ClearButton" value="Clear" />								
+							<input class="f-submit" type="submit" name="DeleteButton" value="Delete Item" />
+							<input class="f-submit" type="reset" name="ClearButton" value="Clear" />
 
 						</fieldset>
-					</form>			
+					</form>
 
 					<div id="footer" role="contentinfo">
 						<p><#COPYRIGHT></p>

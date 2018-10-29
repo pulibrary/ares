@@ -4,9 +4,9 @@
 		<title>Ares - Reserve Video</title>
 		<#INCLUDE filename="include_head.html">
 	</head>
-	
+
 	<body id="type-a">
-		<div id="wrap"> 
+		<div id="wrap">
 		<div id="content-wrap">
 				<#INCLUDE filename="include_instructorcoursemenu.html">
 				<div id="content" role="main" tabindex="-1">
@@ -30,7 +30,7 @@
 									<span class="req">*</span><span class="<#VALIDATION name="ERRORTitle">">Title</span><br />
 									<span class="note">Please do not abbreviate unless your citation is abbreviated</span>
 								</strong>
-								<input name="Title" id="Title" type="text" size="20" class="f-name" value="<#PARAM name="title"/>"/><br />							
+								<input name="Title" id="Title" type="text" size="20" class="f-name" value="<#PARAM name="title"/>"/><br />
 							</label>
 
 							<label for="Author"><#ERROR Name="ERRORAuthor">
@@ -116,6 +116,10 @@
 								</strong>
 								<fieldset>
 									<legend class="offscreen">Supply method</legend>
+									<label for="StaffSearch">
+										<input id="StaffSearch" type="radio" checked <#PARAM Name="SELECTED" Identifier="SupplyMethod" Value="StaffSearch"> name="SupplyMethod" value="StaffSearch" class="f-radio" />
+										Please have library staff pull the material off the shelves</label>
+
 									<label for="File">
 										<input id="File" type="radio" <#PARAM Name="SELECTED" Identifier="SupplyMethod" Value="File"> name="SupplyMethod" value="File" class="f-radio" />
 										I will upload a file</label>
@@ -123,10 +127,6 @@
 									<label for="WillDeliver">
 										<input id="WillDeliver" type="radio" <#PARAM Name="SELECTED" Identifier="SupplyMethod" Value="WillDeliver"> name="SupplyMethod" value="WillDeliver" class="f-radio" />
 										I will bring the material to the library</label>
-
-									<label for="StaffSearch">
-										<input id="StaffSearch" type="radio" <#PARAM Name="SELECTED" Identifier="SupplyMethod" Value="StaffSearch"> name="SupplyMethod" value="StaffSearch" class="f-radio" />
-										Please have library staff pull the material off the shelves</label>
 
 									<label for="WebLink">
 										<input id="WebLink" type="radio" <#PARAM Name="SELECTED" Identifier="SupplyMethod" Value="WebLink"> name="SupplyMethod" value="WebLink" class="f-radio" />

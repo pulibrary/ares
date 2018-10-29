@@ -4,7 +4,7 @@
 		<title>Ares - Reserve Book Chapter</title>
 		<#INCLUDE filename="include_head.html">
 	</head>
-	
+
 	<body id="type-a">
 		<div id="wrap">
 			<div id="content-wrap">
@@ -13,15 +13,15 @@
 				<#INCLUDE filename="include_courseproxycoursemenu.html" restriction="Usertype:CourseProxy">
 				<div id="content" role="main" tabindex="-1">
 					<form action="ares.dll" method="post" name="createitem" class="f-wrap-request">
-						<input type="hidden" name="Action" value="11"/>        
-						<input type="hidden" name="Type" value="10"/>	
-						<input type="hidden" name="ItemType" value="SER"/>						
+						<input type="hidden" name="Action" value="11"/>
+						<input type="hidden" name="Type" value="10"/>
+						<input type="hidden" name="ItemType" value="SER"/>
 						<input type="hidden" name="CopyrightRequired" value="Yes"/>
 						<input type="hidden" name="format" value="BookChapter"/>
 						<input type="hidden" name="ItemID" value="<#ITEM field="ItemID"/>">
-						<input type="hidden" name="CourseID" value="<#COURSE field="CourseID"/>"/>				
+						<input type="hidden" name="CourseID" value="<#COURSE field="CourseID"/>"/>
 						<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
-					
+
 						<div class="req" tabindex="0"><strong>*</strong> Indicates required field</div>
 						<fieldset>
 							<h1 tabindex="0">Reserve Item: Book Chapter</h1>
@@ -37,7 +37,7 @@
 								</strong>
 								<input id="Title" name="Title" type="text" size="40" class="f-name" value="<#PARAM name="Title">"><br />
 							</label>
-						
+
 							<label for="ArticleTitle"><#ERROR name="ERRORArticleTitle">
 								<strong>
 									<span class="req">*</span><span class="<#VALIDATION name="ERRORArticleTitle">">Chapter Title</span>
@@ -61,21 +61,21 @@
 								<input id="Volume" name="Volume" type="text" size="40" class="f-name" value="<#PARAM name="Volume">"><br />
 							</label>
 
-							<label for="Publisher"><#ERROR Name="ERRORPublisher">					
+							<label for="Publisher"><#ERROR Name="ERRORPublisher">
 								<strong>
 									<span class="<#VALIDATION name="ERRORPublisher">">Publisher</span>
 								</strong>
 								<input id="Publisher" name="Publisher" type="text" size="40" class="f-name" value="<#PARAM Name="publisher"/>"><br />
 							</label>
 
-							<label for="PubPlace"><#ERROR Name="ERRORPubPlace">                		
+							<label for="PubPlace"><#ERROR Name="ERRORPubPlace">
 								<strong>
 									<span class="<#VALIDATION name="ERRORPubPlace">">Place of Publication</span>
 								</strong>
 								<input id="PubPlace" name="PubPlace" type="text" size="40" class="f-name" value="<#PARAM Name="pubplace"/>"><br />
 							</label>
-					
-							<label for="PubDate"><#ERROR Name="ERRORPubDate">					          		
+
+							<label for="PubDate"><#ERROR Name="ERRORPubDate">
 								<strong>
 									<span class="<#VALIDATION name="ERRORPubDate">">Date of Publication</span>
 								</strong>
@@ -88,7 +88,7 @@
 								</strong>
 								<input id="Edition" name="Edition" type="text" size="40" class="f-name" value="<#PARAM name="Edition">"><br />
 							</label>
-							
+
 							<label for="Pages"><#ERROR name="ERRORPages">
 								<strong>
 									<span class="req">*</span><span class="<#VALIDATION name="ERRORPages">">Inclusive Pages</span>
@@ -138,20 +138,20 @@
 								<strong>
 									<span class="<#VALIDATION name="ERRORSupplyMethod">" tabindex="0">How will this item be supplied?</span>
 								</strong>
-								<fieldset>			
+								<fieldset>
 									<legend class="offscreen">Supply method</legend>
+									<label for="StaffSearch">
+									<input id="StaffSearch" type="radio" <#PARAM Name="SELECTED" Identifier="SupplyMethod" Value="StaffSearch"> name="SupplyMethod" value="StaffSearch" class="f-radio" />
+									Please have library staff locate the material</label>
+
 									<label for="File">
-									<input id="File" type="radio" checked="checked" <#PARAM Name="SELECTED" Identifier="SupplyMethod" Value="File"> name="SupplyMethod" value="File" class="f-radio" />
+									<input id="File" type="radio" <#PARAM Name="SELECTED" Identifier="SupplyMethod" Value="File"> name="SupplyMethod" value="File" class="f-radio" />
 									I will upload a file</label>
-							
+
 									<label for="WillDeliver">
 									<input id="WillDeliver" type="radio" <#PARAM Name="SELECTED" Identifier="SupplyMethod" Value="WillDeliver"> name="SupplyMethod" value="WillDeliver" class="f-radio" />
 									I will bring the material to the library</label>
-								
-									<label for="StaffSearch">
-									<input id="StaffSearch" type="radio" <#PARAM Name="SELECTED" Identifier="SupplyMethod" Value="StaffSearch"> name="SupplyMethod" value="StaffSearch" class="f-radio" />
-									Please have library staff pull the material off the shelves</label>
-									
+
 									<label for="WebLink">
 									<input id="WebLink" type="radio" <#PARAM Name="SELECTED" Identifier="SupplyMethod" Value="WebLink"> name="SupplyMethod" value="WebLink" class="f-radio" />
 									The item should link to a website
@@ -165,14 +165,14 @@
 								</strong>
 								<input id="URL" name="URL" type="text" size="40" class="f-name" value="<#PARAM name="URL">"><br />
 							</label>
-							
+
 							<#TABLE class="instructor-table" name="CourseItemRestrictions" courseChoice="one" headerText="Reserve Restrictions" IncludeJavascriptCalendar="Yes" calendarText="<img src='images/cal.gif' alt='Open Calendar'/>"/>
-							
+
 							<input class="f-submit" type="submit" name="SubmitButton" value="Submit Item" />
-							<input class="f-submit" type="reset" name="ClearButton" value="Clear" />								
+							<input class="f-submit" type="reset" name="ClearButton" value="Clear" />
 
 						</fieldset>
-					</form>			
+					</form>
 					<div id="footer" role="contentinfo">
 						<p><#COPYRIGHT></p>
 						<p>Powered by <a href="https://www.atlas-sys.com/Ares/" target="_blank">Ares</a></p>
