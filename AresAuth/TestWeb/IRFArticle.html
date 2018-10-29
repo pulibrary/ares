@@ -11,7 +11,7 @@
 				<#INCLUDE filename="include_instructorcoursemenu.html" restriction="Usertype:CourseFullProxy">
 				<#INCLUDE filename="include_courseproxycoursemenu.html" restriction="Usertype:CourseProxy">
 				<div id="content" role="main" tabindex="-1">
-					<form action="ares.dll" method="post" name="createitem" class="f-wrap-request">
+					<form action="ares.dll" method="post" name="createitem">
 						<input type="hidden" name="Action" value="11"/>
 						<input type="hidden" name="Type" value="10"/>
 						<input type="hidden" name="CopyrightRequired" value="Yes"/>
@@ -25,10 +25,10 @@
 							<h1 tabindex="0">Reserve Item: Article</h1>
 							<legend class="offscreen">Reserve Item: Article</legend>
 							<span style="background-color:#E6F4FF ;font-size: 110%" tabindex="0"><#STATUS class="fade"></span>
-							<h2 tabindex="0">Item Information</h2>
 
 							<label for="ItemInfo5"><strong><span class="Valid">Week Needed</span></strong>
 								<select id="ItemInfo5" name="ItemInfo5">
+								<option value="n/a">n/a</option>
 								<option value="01">Week 1</option>
 								<option value="02">Week 2</option>
 								<option value="03">Week 3</option>
@@ -45,15 +45,15 @@
 								<option value="14">Week 14</option>
 								<option value="15">Week 15</option>
 								</select>
-								<br></label>
+							</label>
 
 							<label for="Title"><#ERROR name="ERRORTitle">
 								<strong>
 									<span class="req">*</span>
-									<span class="<#VALIDATION name="ERRORTitle">">Journal Title</span><br/>
+									<span class="<#VALIDATION name="ERRORTitle">">Journal Title</span>
 									<span class="note">Please do not abbreviate unless your citation is abbreviated</span>
 								</strong>
-								<input id="Title" name="Title" type="text" size="40" class="f-name" value="<#PARAM name="Title">" required><br />
+								<input id="Title" name="Title" type="text" size="40" class="f-name" value="<#PARAM name="Title">" required>
 							</label>
 
 							<label for="Volume"><#ERROR name="ERRORVolume">
@@ -61,21 +61,21 @@
 									<span class="req">*</span>
 									<span class="<#VALIDATION name="ERRORVolume">">Journal Volume</span>
 								</strong>
-								<input id="Volume" name="Volume" type="text" size="40" class="f-name" value="<#PARAM name="Volume">" required><br />
+								<input id="Volume" name="Volume" type="text" size="40" class="f-name" value="<#PARAM name="Volume">" required>
 							</label>
 
 							<label for="Issue"><#ERROR name="ERRORIssue">
 								<strong>
 									<span class="<#VALIDATION name="ERRORIssue">">Journal Issue</span>
 								</strong>
-								<input id="Issue" name="Issue" type="text" size="40" class="f-name" value="<#PARAM name="Issue">"><br />
+								<input id="Issue" name="Issue" type="text" size="40" class="f-name" value="<#PARAM name="Issue">">
 							</label>
 
 							<label for="JournalMonth"><#ERROR name="ERRORMonth">
 								<strong>
 									<span class="<#VALIDATION name="ERRORMonth">">Journal Month</span>
 								</strong>
-								<input id="JournalMonth" name="JournalMonth" type="text" size="40" class="f-name" value="<#PARAM name="JournalMonth">"><br />
+								<input id="JournalMonth" name="JournalMonth" type="text" size="40" class="f-name" value="<#PARAM name="JournalMonth">">
 							</label>
 
 							<label for="JournalYear"><#ERROR name="ERRORYear">
@@ -83,7 +83,7 @@
 									<span class="req">*</span>
 									<span class="<#VALIDATION name="ERRORYear">">Journal Year</span>
 								</strong>
-								<input id="JournalYear" name="JournalYear" type="text" size="40" class="f-name" value="<#PARAM name="JournalYear">" required><br />
+								<input id="JournalYear" name="JournalYear" type="text" size="40" class="f-name" value="<#PARAM name="JournalYear">" required>
 							</label>
 
 							<label for="ArticleTitle"><#ERROR name="ERRORArticleTitle">
@@ -91,16 +91,16 @@
 									<span class="req">*</span>
 									<span class="<#VALIDATION name="ERRORArticleTitle">">Article Title</span>
 								</strong>
-								<input id="ArticleTitle" name="ArticleTitle" type="text" size="40" class="f-name" value="<#PARAM name="ArticleTitle">" required><br />
+								<input id="ArticleTitle" name="ArticleTitle" type="text" size="40" class="f-name" value="<#PARAM name="ArticleTitle">" required>
 							</label>
 
 							<label for="Author"><#ERROR name="ERRORAuthor">
 								<strong>
 									<span class="req">*</span>
-									<span class="<#VALIDATION name="ERRORAuthor">">Article Author</span><br/>
+									<span class="<#VALIDATION name="ERRORAuthor">">Article Author</span>
 									<span class="note">(Last Name, First Name)</span>
 								</strong>
-								<input id="Author" name="Author" type="text" size="40" class="f-name" value="<#PARAM name="Author">" required><br />
+								<input id="Author" name="Author" type="text" size="40" class="f-name" value="<#PARAM name="Author">" required>
 							</label>
 
 							<label for="Pages"><#ERROR name="ERRORPages">
@@ -108,87 +108,86 @@
 									<span class="req">*</span>
 									<span class="<#VALIDATION name="ERRORPages">">Inclusive Pages</span>
 								</strong>
-								<input id="Pages" name="Pages" type="text" size="40" class="f-name" value="<#PARAM name="Pages">" required><br />
+								<input id="Pages" name="Pages" type="text" size="40" class="f-name" value="<#PARAM name="Pages">" required>
 							</label>
 
 							<label for="ISXN"><#ERROR name="ERRORISXN">
 								<strong>
 									<span class="<#VALIDATION name="ERRORISXN">">ISSN</span>
 								</strong>
-								<input id="ISXN" name="ISXN" type="text" size="40" class="f-name" value="<#PARAM name="ISXN">"><br />
+								<input id="ISXN" name="ISXN" type="text" size="40" class="f-name" value="<#PARAM name="ISXN">">
 							</label>
 
 							<label for="DOI"><#ERROR name="ERRORDOI">
 								<strong>
 									<span class="<#VALIDATION name="ERRORDOI">">DOI</span>
 								</strong>
-								<input id="DOI" name="DOI" type="text" size="40" class="f-name" value="<#PARAM name="DOI">"><br />
+								<input id="DOI" name="DOI" type="text" size="40" class="f-name" value="<#PARAM name="DOI">">
 							</label>
 
 							<label for="ESPNumber"><#ERROR name="ERRORESPNumber">
 								<strong>
 									<span class="<#VALIDATION name="ERRORESPNumber">">OCLC Record Number</span>
 								</strong>
-								<input id="ESPNumber" name="ESPNumber" type="text" size="55" class="f-name" value="<#PARAM name="ESPNumber">"><br />
+								<input id="ESPNumber" name="ESPNumber" type="text" size="55" class="f-name" value="<#PARAM name="ESPNumber">">
 							</label>
 
 							<label for="Notes"><#ERROR name="ERRORNotes">
 								<strong>
-									<span class="<#VALIDATION name="ERRORNotes">">Notes</span><br />
+									<span class="<#VALIDATION name="ERRORNotes">">Notes</span>
 									<span class="note">Put any information here that may help us find the item, as well as any other pertinent information.</span>
 								</strong>
 								<textarea id="Notes" name="ItemNote" rows="2" cols="40" class="f-name"><#PARAM name="ItemNote"></textarea>
-								<br /><br />
 							</label>
 
 							<label for="ItemTags"><#ERROR name="ItemTags">
 								<strong>
-									<span class="<#VALIDATION name="ItemTags">">Tags</span><br />
-									<br/><span class="note">Comma separated list of tags to be assigned to this Item</span>
+									<span class="<#VALIDATION name="ItemTags">">Tags</span>
+									<span class="note">Comma separated list of tags to be assigned to this Item</span>
 								</strong>
-								<textarea id="ItemTags" name="ItemTags" rows="4"><#PARAM name="ItemTags"/></textarea><br /><br />
+								<textarea id="ItemTags" name="ItemTags" rows="4"><#PARAM name="ItemTags"/></textarea>
 							</label>
 
 							<label for="CitedIn"><#ERROR name="ERRORCitedIn">
 								<strong>
 									<span class="<#VALIDATION name="ERRORCitedIn">">Where did you find this citation?</span>
 								</strong>
-								<input id="CitedIn" name="CitedIn" type="text" size="40" class="f-name" value="<#PARAM name="CitedIn">"><br />
+								<input id="CitedIn" name="CitedIn" type="text" size="40" class="f-name" value="<#PARAM name="CitedIn">">
 							</label>
 
-							<label for="SupplyMethod"><#ERROR name="ERRORSupplyMethod">
-								<strong>
-									<span class="<#VALIDATION name="ERRORSupplyMethod">" tabindex="0">How will this item be supplied?</span>
-								</strong>
-								<fieldset>
-									<legend class="offscreen">Supply method</legend>
-									<label for="StaffSearch">
-										<input id="StaffSearch" type="radio" checked <#PARAM Name="SELECTED" Identifier="SupplyMethod" Value="StaffSearch"> name="SupplyMethod" value="StaffSearch" class="f-radio" />
-										Please have library staff locate the material
-									</label>
+							<fieldset class="supply-method">
+								<legend><#ERROR name="ERRORSupplyMethod">
+									<strong>
+										<span class="<#VALIDATION name="ERRORSupplyMethod">" tabindex="0">How will this item be supplied?</span>
+									</strong>
+								</legend>
 
-									<label for="File">
-										<input id="File" type="radio" <#PARAM Name="SELECTED" Identifier="SupplyMethod" Value="File"> name="SupplyMethod" value="File" class="f-radio" />
-										I will upload a file
-									</label>
+								<label for="StaffSearch">
+									<input id="StaffSearch" type="radio" checked <#PARAM Name="SELECTED" Identifier="SupplyMethod" Value="StaffSearch"> name="SupplyMethod" value="StaffSearch" class="f-radio" />
+									Please have library staff locate the material
+								</label>
 
-									<label for="WillDeliver">
-										<input id="WillDeliver" type="radio" <#PARAM Name="SELECTED" Identifier="SupplyMethod" Value="WillDeliver"> name="SupplyMethod" value="WillDeliver" class="f-radio" />
-										I will bring the material to the library
-									</label>
+								<label for="File">
+									<input id="File" type="radio" <#PARAM Name="SELECTED" Identifier="SupplyMethod" Value="File"> name="SupplyMethod" value="File" class="f-radio" />
+									I will upload a file
+								</label>
 
-									<label for="WebLink">
-										<input id="WebLink" type="radio" <#PARAM Name="SELECTED" Identifier="SupplyMethod" Value="WebLink"> name="SupplyMethod" value="WebLink" class="f-radio" />
-										The item should link to a website
-									</label>
-								</fieldset>
-							</label>
+								<label for="WillDeliver">
+									<input id="WillDeliver" type="radio" <#PARAM Name="SELECTED" Identifier="SupplyMethod" Value="WillDeliver"> name="SupplyMethod" value="WillDeliver" class="f-radio" />
+									I will bring the material to the library
+								</label>
+
+								<label for="WebLink">
+									<input id="WebLink" type="radio" <#PARAM Name="SELECTED" Identifier="SupplyMethod" Value="WebLink"> name="SupplyMethod" value="WebLink" class="f-radio" />
+									The item should link to a website
+								</label>
+							</fieldset>
 
 							<label for="URL"><#ERROR name="ERRORURL">
 								<strong>
 									<span class="<#VALIDATION name="ERRORURL">">If you chose the item should link to a website above, please enter the URL</span>
 								</strong>
-								<input id="URL" name="URL" type="text" size="40" class="f-name" value="<#PARAM name="URL">"><br />
+								<input id="URL" name="URL" type="text" size="40" class="f-name" value="<#PARAM name="URL">">
 							</label>
 
 							<#TABLE class="instructor-table reserve-restrictions" name="CourseItemRestrictions" courseChoice="one" headerText="Reserve Restrictions" IncludeJavascriptCalendar="Yes" calendarText="<img src='images/cal.gif' alt='Open Calendar'/>"/>
@@ -198,12 +197,12 @@
 
 						</fieldset>
 					</form>
+				</div>
 
-					<div id="footer" role="contentinfo">
-						<p><#COPYRIGHT></p>
-						<p>Powered by <a href="https://www.atlas-sys.com/Ares/" target="_blank">Ares</a></p>
-						<#INCLUDE filename="include_footer.html">
-					</div>
+				<div id="footer" role="contentinfo">
+					<p><#COPYRIGHT></p>
+					<p>Powered by <a href="https://www.atlas-sys.com/Ares/" target="_blank">Ares</a></p>
+					<#INCLUDE filename="include_footer.html">
 				</div>
 			</div>
 		</div>
