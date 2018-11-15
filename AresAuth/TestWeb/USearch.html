@@ -13,7 +13,7 @@
 			<div id="content-wrap">
 				<#INCLUDE filename="include_menu.html">
 				<div id="content" role="main" tabindex="-1">
-					<h1 class="offscreen">Search</h1>
+					<h1>Course Search</h1>
 					<span style="background-color:#E6F4FF ;font-size: 110%" tabindex="0"><#STATUS class="fade"></span>
 					<form name="ItemSearch" action="ares.dll" method="post">
 						<input type="hidden" name="action" value="11" />
@@ -21,7 +21,7 @@
 						<input id="SessionID" name="SessionID" type="hidden" value="<#PARAM name="SessionID" />" />
 
 						<table width="100%">
-							<caption>Course Search</caption>
+							<caption class="offscreen">Course Search</caption>
 							<tr>
 								<td align="right">Course Number</td>
 								<td width="7%">

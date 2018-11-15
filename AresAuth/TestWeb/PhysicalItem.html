@@ -1,5 +1,4 @@
-<div class="row"><span style="color:#3333CC; font-size: 1.15em;">
-    <a href="https://catalog.princeton.edu/catalog/<#ITEM field="ISXN">" target="_blank">Click to see the availabilty of: <#ITEM field="Title"></a>
-    </span>
-</div>
-<div class="row"><em><#ITEM field="CallNumber"></em></div>
+<div class="row call-number">Call Number: <#ITEM field="CallNumber"></div>
+<div class="row">
+        <#CONDITIONAL type="NotEmpty" test="<#ITEM field='ISXN'>" true="<a href='https://catalog.princeton.edu/catalog?utf8=%E2%9C%93&search_field=all_fields&q=<#ITEM field='ISXN'>' target='_blank'><img src='images/view-item.png' width='16px' alt='View item in new window' aria-hidden='true' /> View item availabilty</a>" false="<a href='https://catalog.princeton.edu/catalog?utf8=%E2%9C%93&search_field=all_fields&q=<#ITEM field='Callnumber'>' target='_blank'><img src='images/view-item.png' width='16px' alt='View item in new window' aria-hidden='true' /> View item availabilty</a>">
+    </div>

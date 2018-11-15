@@ -6,7 +6,7 @@ jQuery(document).ready(function ($) {
 
     //Add an input tag to every table header
     $('table.filterTable thead tr.row-headings th').each(function () {
-        //First check if there is a column title. 
+        //First check if there is a column title.
         var title = $(this).text();
 
         //If a title displays, allow filtering
@@ -31,21 +31,21 @@ jQuery(document).ready(function ($) {
 
             if (items.length > 0) {
                 //Add input to the column header. Size it to be the length of the placeholder text
-                $(this).append('<br/><input class="dataTablesInputFilter" type="text" title="Column filter text" placeholder="Search ' + title + '" size="' + (title.length + 7) + '" />');
+                $(this).append('<br/><input class="dataTablesInputFilter" type="text" title="Column filter text" placeholder="Search ' + title + '" size="' + (title.length + 7) + '" aria-label="Search ' + title + '" />');
             }
         }
     });
 
-    //Initialize the DataTable, removing paging, info, and the default search box that allows searching across all tables. 
+    //Initialize the DataTable, removing paging, info, and the default search box that allows searching across all tables.
     var table = $('table.filterTable').DataTable({
         "ordering": false,
         "paging": false,
-        "dom": 'tr' //Filtering is removed so the default search box will not display above the table. 'l' - Length changing, 'f' - Filtering input, 't' - The table, 'i' - Information, 'p' - Pagination, 'r' - pRocessing 
+        "dom": 'tr' //Filtering is removed so the default search box will not display above the table. 'l' - Length changing, 'f' - Filtering input, 't' - The table, 'i' - Information, 'p' - Pagination, 'r' - pRocessing
     }).columns().every(function () {
         var that = this;
 
         $('input.dataTablesInputFilter', this.header()).on('keyup change', function () {
-            //Add temporary activeFilterTable for limiting the FixRowStyles            
+            //Add temporary activeFilterTable for limiting the FixRowStyles
             $(this).closest('table').addClass('activeFilterTable');
 
             //Perform the search and update the table

@@ -7,22 +7,22 @@
 			var sessionid = '<#PARAM name="SessionID"/>';
 		</script>
 	</head>
-	
+
 	<body id="type-a">
-		<div id="wrap"> 
+		<div id="wrap">
 			<div id="content-wrap"> <#INCLUDE filename="include_studentcoursemenu.html">
-				<div id="content" role="main" tabindex="-1"> 
+				<div id="content" role="main" tabindex="-1">
 				<h1>Are you sure you want to remove this course?</h1>
 				<span class="note">By removing this course you will no longer have access to this course or reserve items in this course.<span class="<#CONDITIONAL Test='UseHotList' Type='CustomizationKey' False='hidden'>"> Any items in your <#CUSTOMIZATION name='HotListName'> that are associated with this course will also be removed from your <#CUSTOMIZATION name='HotListName'>.</span></span>
-					<br/><a href="<#ACTION action="22" type="11">&CourseID=<#COURSE field="CourseID">"><span style="font-size: 1.4em;">Yes</span></a>&nbsp;&nbsp;<a href="<#ACTION action="10" form="63" ValueType="Lookup" Value="CourseID">"><span  style="font-size: 1.4em;">No</span></a> 
+					<br/><a href="<#ACTION action="22" type="11">&CourseID=<#COURSE field="CourseID">"><span style="font-size: 1.4em;">Yes</span></a>&nbsp;&nbsp;<a href="<#ACTION action="10" form="63" ValueType="Lookup" Value="CourseID">"><span  style="font-size: 1.4em;">No</span></a>
 					<br/>
 					<p>
 						<div class="student" style="float:none">
 							<div class="header">Course Details</div>
-							<div class="row"><#COURSE field="CourseNumber"/>&nbsp;<#COURSE field="Name"/>(<#COURSE field="CourseCode"/>)</div>
+							<div class="row"><#COURSE field="CourseNumber"/> <#COURSE field="Name"/>(<#COURSE field="CourseCode"/>)</div>
 							<div class="row"><#TABLE class="xlist-table" name="CourseCrossList" HideColumnHeaders="True" column="CourseNumber" headerText="This course is also cross-listed as the following:" NoDataAction="ShowNothing"/></div>
 							<div class="row"><#COURSE field="Semester"/></div>
-							<div class="row"><#COURSE field="URL"/></div>	
+							<div class="row"><#COURSE field="URL"/></div>
 							<div class="row"><#COURSE field="Instructor"/></div>
 							<div class="row"><#COURSE field="Description"/></div>
 						</div>

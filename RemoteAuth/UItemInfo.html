@@ -10,14 +10,14 @@ var sessionid = '<#PARAM name="SessionID"/>';
 <body id="type-b">
 <div id="wrap">
 
-	<#INCLUDE filename="include_header.html">	
-	
+	<#INCLUDE filename="include_header.html">
+
 
 	<div id="content-wrap">
-		<#INCLUDE filename="include_menu.html">	
-	
-		
-		
+		<#INCLUDE filename="include_menu.html">
+
+
+
 		<div id="content" role="main" tabindex="-1">
 			<h1 class="offscreen"><#CUSTOMIZATION name='HotListName'></h1>
 			<a href="<#ACTION action="10" form="60" valueType="Lookup" Value="CourseID">">Back to <#COURSE field="CourseNumber"> - <#COURSE field="Name"></a>
@@ -30,7 +30,6 @@ var sessionid = '<#PARAM name="SessionID"/>';
 			<div class="row"><#ITEM field="Author"/></div>
 			<div class="row"><#ITEM field="Description"/></div>
 			<div class="row"><#ITEM field="BuildURL" freeText="False" linkText="<img src='images/new-win-icon.gif' height='16' width='16' alt='View item in new window' aria-hidden='true' /> View this item"></div>
-            <div class="row"><#ITEM field="BuildRISExportURL" alt="Export Citation" linkText="Export Citation"></div>
 			<div class="row"><#ITEM field="Tags" TagURL="Yes" TagType="Instructor" headerText="Instructor Tags: "/></div>
 			<div class="row">
 					<form action="ares.dll" method="post" name="ItemTags" class="f-wrap-request">
@@ -53,19 +52,19 @@ var sessionid = '<#PARAM name="SessionID"/>';
 
 			<div class="row"><#ITEM field="Text"></div>
 			<#ITEM field="PhysicalText" includeFile="PhysicalItem.html"/>
-			<div class="row"><#ITEM field="WorldcatLink" linkText="<img src='images/worldcat.gif' height='16' width='16' alt='Worldcat Logo' title='Get more information from OCLC Open Worldcat'/> Get more information"></div>		
-			</div>											
+			<div class="row"><#ITEM field="WorldcatLink" linkText="<img src='images/worldcat.gif' height='16' width='16' alt='Worldcat Logo' title='Get more information from OCLC Open Worldcat'/> Get more information"></div>
+			</div>
 
 			<div id="footer" role="contentinfo">
 			<p><#COPYRIGHT></p>
 			<#INCLUDE filename="include_footer.html">
 			</div>
-			
+
 		</div>
-		
-	
+
+
 	</div>
-	
+
 </div>
 </body>
 </html>
