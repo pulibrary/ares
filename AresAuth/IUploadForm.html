@@ -12,39 +12,38 @@
 		<div id="wrap">
 
 			<div id="content-wrap">
-				<#INCLUDE filename="include_menu.html">	
-			
+				<#INCLUDE filename="include_menu.html">
+
 				<div id="content" role="main" tabindex="-1">
 					<h1 class="offscreen">Upload Form</h1>
-					<span style="background-color:#E6F4FF ;font-size: 110%" tabindex="0"><#STATUS class="fade"></span>
+					<span style="background-color:#E6F4FF ;font-size: 110%" tabindex="0"><#STATUS class="fade"></span><br />
 
 					<div class="instructor">
-						<div class="header">Reserve Item</div>
 						<div class="row"><span style="font-weight: bold"><#ITEM field="Title"/></span></div>
 						<div class="row"><#ITEM field="ArticleTitle"/></div>
 						<div class="row"><#ITEM field="Author"/></div>
 						<div class="row"><#ITEM field="Description"/></div>
-						<div class="row"><#ITEM field="BuildURL" freeText="False" linkText="<img src='images/new-win-icon.gif' height='16' width='16' alt='View item in new window' aria-hidden='true' /> View this item"></div>						
-					</div>											
+					</div><br />
 
 					<form action="ares.dll/Upload" method="POST" enctype='multipart/form-data' >
 						<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
-						<input type="hidden" name="Username" value="<#USER field="Username">"/> 
-						<input type="hidden" name="ItemIDs" value="<#PARAM name="ItemIDs">"> 
+						<input type="hidden" name="Username" value="<#USER field="Username">"/>
+						<input type="hidden" name="ItemIDs" value="<#PARAM name="ItemIDs">">
 						<span tabindex="0">Choose a file to upload: <input type="file" name="ItemFileLocation" title="Browse for file to upload." /></span>
+						<span class="note">Please note: the maximum file size for upload via this form is 28.6 MB.</span><br />
 						<input type="submit" name="SubmitButton" value="Submit Item" />
 					</form>
 
-					<div id="footer" role="contentinfo">
-						<p><#COPYRIGHT></p>
-						<p>Powered by <a href="https://www.atlas-sys.com/Ares/" target="_blank">Ares</a></p>
-						<#INCLUDE filename="include_footer.html">
-					</div>
-					
 				</div>
-			
+
+				<div id="footer" role="contentinfo">
+					<p><#COPYRIGHT></p>
+					<p>Powered by <a href="https://www.atlas-sys.com/Ares/" target="_blank">Ares</a></p>
+					<#INCLUDE filename="include_footer.html">
+				</div>
+
 			</div>
-			
+
 		</div>
 	</body>
 </html>

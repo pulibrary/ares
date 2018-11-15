@@ -129,7 +129,7 @@ fieldset {
 
 label {
 	display: block;
-	padding: 5px 0
+	padding: 5px 0;
 }
 
 label br {
@@ -206,8 +206,28 @@ select {
 	height: 36px;
 }
 
+input[type="text"],
 textarea {
+	display: block;
 	width: 100%;
+	margin-bottom: 1em;
+}
+
+[for="ItemInfo5"] select,
+[for="PickupLocation"] select {
+	display: block;
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+.supply-method {
+	padding: 0;
+	margin-bottom: 1em;
+}
+
+.supply-method legend {
+	padding-top: 5px;
+	margin: 0;
 }
 
 /* FORMS - f-wrap-1 - simple form, headings on left, form elements on right */
@@ -577,6 +597,7 @@ form .note {
 	color: #37474f;
 	font-size: .8rem;
 	font-weight: normal;
+	display: block;
 }
 
 form.f-wrap-request label strong .req {
@@ -2173,6 +2194,10 @@ tfoot td {
 	text-decoration: underline;
 }
 
+.reserve-restrictions {
+	display: none;
+}
+
 .sort-options,
 .batch-menu {
 	padding-top: 1rem;
@@ -2241,6 +2266,10 @@ table caption {
 	padding: 6px 12px;
 	display: inline-block;
 	border-radius: 2px;
+}
+
+.current-status span {
+	font-weight: bold;
 }
 
 .instructor .header {
@@ -2603,12 +2632,22 @@ div.view-edit-delete {
 .item-import-course-details span {
 	width: 50%;
 	float: left;
-	border: 1px solid rgb(0, 0, 102);
+	border: 1px solid #263238;
 	border-collapse: collapse !important;
 }
 
+.item-import-course-details div {
+	padding-left: .5em;
+}
+
 .item-import-course-details .course-details-heading {
-	background-color: rgb(0, 0, 102);
+	background-color: #263238;
 	color: #FFFFFF;
 	font-weight: bold;
+	padding: .5em;
+}
+
+#ImportItems input[type="text"] {
+	display: inline-block;
+	width: auto;
 }
