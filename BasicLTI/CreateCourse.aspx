@@ -6,7 +6,7 @@
 
     <p>Items needed for the course may be placed "on reserve," guaranteeing their availability for classroom use during the semester. You may add items to your course using this tool.</p>
     
-    <p>If you would like further instructions on this process, please review <a href="https://library.princeton.edu/circulation/how-submit-course-reserves-request">How to Submit a Course Reserves Request</a>.</p>
+    <p>If you would like further instructions on this process, please review <a href="https://library.princeton.edu/circulation/how-submit-course-reserves-request" target="_blank">How to Submit a Course Reserves Request (opens in a new tab)</a>.</p>
     
     <form method="post" action="<#webserviceurl>/BasicLti/SubmitCourseForm"/>
     <#ltipostdata>
